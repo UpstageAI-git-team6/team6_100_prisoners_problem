@@ -47,3 +47,11 @@ while master_loop_count < 101:
         if failure_signal == 1:
             break
         x += 1
+
+    if failure_signal == 0:
+    successes = successes + 1
+
+    master_loop_count += 1
+
+print("Successes = " + str(successes))
+print("Failures = " + str(failures))
