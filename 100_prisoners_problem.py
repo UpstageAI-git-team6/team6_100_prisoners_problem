@@ -34,3 +34,16 @@ while master_loop_count < 101:
     while x < 100:
         selected_drawer = drawers[prisoner_number[x]]
         loop_limit = 1
+
+        while loop_limit < 51:
+            if selected_drawer == prisoner_number[x]:
+                loop_limit = 100
+            else:
+                selected_drawer = drawers[selected_drawer]
+                loop_limit += 1
+                if loop_limit == 51:
+                    failures = failures + 1
+                    failure_signal = 1
+        if failure_signal == 1:
+            break
+        x += 1
