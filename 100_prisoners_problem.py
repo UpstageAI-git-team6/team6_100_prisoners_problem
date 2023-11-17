@@ -27,3 +27,10 @@ while master_loop_count < 101:
         drawers[drawer_count] = tickets[shuffle_count]
         drawer_count += 1
         shuffle_count += 1
+
+    # Simulate prisoners completing the exercise
+    x = 0
+    failure_signal = 0
+    while x < 100:
+        selected_drawer = drawers[prisoner_number[x]]
+        loop_limit = 1
